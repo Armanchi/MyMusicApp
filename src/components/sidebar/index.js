@@ -12,9 +12,9 @@ const Sidebar = () => {
     const [image, setImage] = useState("https://i.pinimg.com/564x/03/52/69/035269c9cdd1f497bf86ed1fa0c54811.jpg");
     useEffect(() => {
         apiClient.get("me").then((response) => {
-            setImage(response.data.images[0].url);
-        })
-    }, []);
+          setImage(response.data.images[0].url);
+        });
+      }, []);
     return(
         <div className="sidebar-container">
             <img src={image} className="profile-img" alt="profile" />
